@@ -22,7 +22,7 @@ Bu projeyi çalıştırmak için bilgisayarınızda [Go](https://go.dev/dl/) yü
 1.  Projeyi klonlayın:
     ```bash
     git clone https://github.com/07enesavci/Web-Scraper.git
-    cd PROJEADIN
+    cd Web-Scraper
     ```
 
 2.  Gerekli kütüphaneleri indirin:
@@ -36,4 +36,4 @@ Programı çalıştırmak için terminalden `go run` komutunu ve hedef web sites
 
 **Örnek 1 (https ile):**
 ```bash
-go run main.go [https://www.google.com](https://www.google.com)
+go run main.go https://yildizcti.com/
