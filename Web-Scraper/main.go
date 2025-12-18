@@ -22,9 +22,10 @@ func main() {
 	fmt.Println("🌐 İşlem başlıyor, gidilecek adres:", hedefAdres)
 
 	tarayiciAyarlari := append(chromedp.DefaultExecAllocatorOptions[:],
-		chromedp.Flag("headless", true),
+		chromedp.Flag("headless", true), // Arayüzsüz mod
 		chromedp.WindowSize(1920, 1080),
 		chromedp.Flag("ignore-certificate-errors", true),
+		chromedp.UserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"),
 	)
 
 	yoneticiContext, iptalYonetici := chromedp.NewExecAllocator(context.Background(), tarayiciAyarlari...)
@@ -35,8 +36,8 @@ func main() {
 	)
 	defer iptalTarayici()
 
-	// 30 saniye zaman aşımı
-	zamanIsleyici, iptalZaman := context.WithTimeout(tarayiciContext, 30*time.Second)
+	// 120 saniye zaman aşımı
+	zamanIsleyici, iptalZaman := context.WithTimeout(tarayiciContext, 120*time.Second)
 	defer iptalZaman()
 
 	var htmlKaynakKod string
