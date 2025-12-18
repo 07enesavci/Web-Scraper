@@ -32,7 +32,8 @@ Bu projeyi çalıştırmak için bilgisayarınızda [Go](https://go.dev/dl/) yü
 
 ## 💻 Kullanım
 
-Programı çalıştırmak için terminalden `go run` komutunu ve hedef web sitesini kullanmanız yeterlidir.
+
+Programı çalıştırmak için terminalden proje dizinine gidin daha sonra `go run` komutunu ve hedef web sitesini kullanmanız yeterlidir.
 
 **Örnek 1 (https ile):**
 ```bash
